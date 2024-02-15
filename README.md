@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/SameerJS6/React-Projects/tree/master/Room-Homepage)
+- Solution URL: [Github](https://github.com/naijamesz/React-Projects/tree/master/Room-Homepage)
 - Live Site URL: [Live Site On Netilify](https://home-sameer.netlify.app/)
 
 ## My process
