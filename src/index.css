@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gray-400: hsl(0, 0%, 27%);
+  --gray: hsl(0, 0%, 63%);
+  --black: black;
+  --white: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-weight: 500;
+  font-family: 'League Spartan', sans-serif;
+}
+::-webkit-scrollbar {
+  width: 1px;
+}
+/* Navbar  */
+
+.navbar > li {
+  position: relative;
+}
+.navbar > li::after {
+  content: '';
+  left: 24%;
+  width: 50%;
+  height: 2px;
+  bottom: -2px;
+  position: absolute;
+  transform: scale(0);
+  border-radius: 100vmax;
+  background: var(--white);
+  transition: 350ms ease-in-out;
+  transform-origin: center center;
+}
+/* Hero Section  */
+.hero-wrapper {
+  display: grid;
+}
+/* For Image Slider Animation  */
+.slide {
+  opacity: 0.9;
+  transform: scale(1.05);
+  transition: all 1s ease;
+}
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 1s ease;
+}
+/* For Main Content Slider Change  */
+.content {
+  opacity: 0;
+  translate: 0 -10px;
+  transition: all 1s ease;
+}
+.content.current {
+  opacity: 1;
+  translate: 0 0;
+  transition: all 1s ease;
+}
+/* For Image Reveal GSAP Animations  */
+.image-pseudo,
+.image-pseudo-2,
+.main-img {
+  position: relative;
+}
+.image-pseudo::after,
+.main-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+.image-pseudo-2::after {
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: white;
+}
+/* For React Ripple  */
+.react-ripples:has(.shop-btn) {
+  width: fit-content;
+  border-radius: 100vmax;
+}
+
+/* All the Media Quires  */
+@media (hover: hover) {
+  .navbar > li:hover::after {
+    transform: scale(1);
+  }
+}
+@media (max-width: 370px) {
+  .gap-7 {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .grid-wrapper {
+    grid-template-areas:
+      'image1 image2'
+      'contentbox contentbox';
+  }
+  .grid-wrapper > div:first-child {
+    grid-area: image1;
+  }
+  .grid-wrapper > div:nth-child(2) {
+    grid-area: contentbox;
+  }
+  .grid-wrapper > div:nth-last-child() {
+    grid-area: image3;
+  }
+}
+@media (min-width: 1280px) {
+  .grid-wrapper {
+    grid-template-areas: 'image1 contentbox image2';
+  }
+  .hero-wrapper {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
