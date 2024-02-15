@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/naijamesz/React-Projects/tree/master/Room-Homepage)
-- Live Site URL: [Live Site On Netilify](https://home-sameer.netlify.app/)
+- Live Site URL: [Live Site On Netilify](https://fem-room-homepage-4kw3.vercel.app/)
 
 ## My process
 
@@ -90,8 +90,8 @@ let ImageReveal = CSSRulePlugin.getRule(".image-pseudo-2::after");
 
 ## Author
 
-- Website - [Github](https://github.com/SameerJS6/)
-- Frontend Mentor - [@SameerJS6](https://www.frontendmentor.io/profile/sameerjs6)
+- Website - [Github](https://github.com/naijamesz/)
+- Frontend Mentor - [@SameerJS6](https://www.frontendmentor.io/profile/naijamesz)
 
 ## Acknowledgments
 
